@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+:root {
+  --bg-me-900: #f2f2fc;
+  --bg-me-100: #fdf9ff;
+  --bg-me-50: #e8dfec;
+  --text-me-900: #302e4d;
+  --text-me-700: #504e70;
+  --transpanecy-me-400: #d9d9d9;
+  --transpanecy-me-200: #e7e8ea;
+  --skin-color: #fe942a;
+}
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  /* text-decoration: none; */
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: none;
+}
+
+ul {
+  list-style: none;
+}
+.center {
+  display: grid;
+  place-items: center;
+}
+.grid-container {
+  margin-top: 50px;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  align-content: start;
+  column-gap: 25px;
+  row-gap: 20px;
+}
+.hover-card:hover {
+  transform: translateY(-10px); /* Moves the card up by 10px */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Adds a deeper shadow to 'lift' the card */
+}
+
+/* ================================ */
+/* ================================ */
+
+.nav {
+  min-height: 50px;
+  width: 100dvw;
+  background: var(--bg-me-100);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  padding: 3px;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav li {
+  align-self: stretch;
+}
+nav li:nth-child(1) {
+  flex: 2 1 0;
+}
+nav li:nth-child(2) {
+  flex: 4 1 0;
+}
+
+nav li:nth-child(3) {
+  flex: 1 1 0;
+}
+
+.nav-item {
+  width: 100%;
+  height: 100%;
+  color: var(--text-me-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 4px;
+}
+.nav-item span:nth-child(1) {
+  display: flex;
+  background: var(--transpanecy-me-200);
+  gap: 7px;
+  padding: 7px;
+  border-radius: 5px;
+  border: 0.1px solid var(--transpanecy-me-400);
+}
+.nav-item span:nth-child(2) {
+  display: flex;
+  color: var(--skin-color);
+  gap: 7px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.1px solid var(--transpanecy-me-400);
+}
+.hero {
+  display: flex;
+  position: relative;
+}
+.hero-bg {
+  background-image: url("src/assets/imgs/hero.jpg");
+
+  background-position: center;
+  background-size: cover;
+  filter: blur(3px);
+  position: absolute;
+  height: 295px;
+  width: 100dvw;
+}
+
+.hero-content {
+  background-color: #00000071;
+  z-index: 2;
+  color: white;
+  height: 295px;
+  width: 100dvw;
+}
+.hero-content span {
+  color: var(--skin-color);
+}
+
+.fav-item {
+  width: 45dvw;
+  max-width: 400px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.food {
+  background-image: url("src/assets/imgs/mashawi.jpg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: calc(var(--spacing) * 35);
+  width: 100%;
+}
